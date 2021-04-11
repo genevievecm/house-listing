@@ -1,0 +1,6 @@
+@use './variables' as vars;
+
+@function pxToRem($size) {
+  $remSize: $size / vars.$baseFontSize;
+  @return #{$remSize}rem;
+}

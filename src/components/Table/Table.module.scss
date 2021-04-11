@@ -1,0 +1,23 @@
+@use '../../styles/colors';
+@use '../../styles/functions' as func;
+
+.tableWrapper {
+	border: 1px solid #eee;
+	border-radius: 5px;
+	padding: func.pxToRem(20);
+	width: 100%;
+	box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+.table {
+	text-align: left;
+	width: 100%;
+
+	th, td {
+		padding: func.pxToRem(5) func.pxToRem(10);
+	}
+}
+
+.collapseBorder {
+	border-collapse: collapse;
+}

@@ -1,0 +1,92 @@
+@use '../../styles/colors';
+@use '../../styles/functions' as func;
+
+.gallery {
+	background: #eee;
+	display: flex;
+	flex-direction: row;
+
+	.galleryImg {
+		box-sizing: border-box;
+		padding-right: func.pxToRem(4);
+		width: 50%;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}
+
+.listingPrice {
+	align-items: center;
+	background: white;
+  box-sizing: border-box;
+	border-radius: func.pxToRem(5);
+	display: flex;
+	flex-direction: column;
+	margin: func.pxToRem(-80) auto 0;
+	justify-content: c;
+	padding: func.pxToRem(15);
+	position: relative;
+	width: 50%;
+	padding-bottom: 20px;
+
+	&:after {
+		background: colors.$tertiary;
+		bottom: 0;
+		content: '';
+		height: func.pxToRem(2);
+		position: absolute;
+		width: func.pxToRem(70);
+	}
+
+	.priceCity {
+		font-size: func.pxToRem(16);
+		margin: 0;
+	}
+
+	.priceDollars {
+		font-size: func.pxToRem(40);
+		margin: func.pxToRem(15) 0;
+	}
+
+	.priceRooms {
+		display: flex;
+    list-style: none;
+		margin: 0;
+		padding: 0;
+
+		.priceRoomItem {
+			padding: 0 func.pxToRem(10);
+		}
+	}
+}
+
+.listingDetails {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: func.pxToRem(30);
+}
+
+.roomsTable {
+	display: flex;
+	margin-top: func.pxToRem(30);
+
+	.interactiveRow:hover {
+		cursor: pointer;
+	}
+}
+
+.shapeWrapper {
+	padding-left: 10%;
+	box-sizing: border-box;
+	min-width: 40%;
+}
+
+.active {
+	background: #eee
+}
+
+.inactive {
+	background: none;
+}

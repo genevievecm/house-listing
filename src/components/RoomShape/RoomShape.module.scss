@@ -1,0 +1,15 @@
+@use '../../styles/colors';
+@use '../../styles/functions' as func;
+
+.roomShape {
+	background: colors.$primary;
+	border-radius: func.pxToRem(5);
+	box-sizing: border-box;
+	box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+	color: white;
+	display: block;
+	display: flex;
+	font-weight: 700;
+	transition: all 0.3s ease-in-out;
+	padding: 20px;
+}

@@ -1,0 +1,25 @@
+@use '../../styles/functions' as func;
+@use '../../styles/colors';
+
+.header {
+	align-items: center;
+	display: flex;
+	box-sizing: border-box;
+	height: func.pxToRem(75);
+
+	nav {
+		box-sizing: border-box;
+		padding: func.pxToRem(20);
+	}
+
+	.logo {
+		background: colors.$secondary;
+		border-radius: func.pxToRem(5);
+		font-weight: 700;
+		padding: func.pxToRem(10) func.pxToRem(20);
+	}
+}
+
+.footer {
+	height: func.pxToRem(100)
+}

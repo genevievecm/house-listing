@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Layout from './components/Layout';
+import Listing from './pages/Listing';
 import reportWebVitals from './reportWebVitals';
 
+import './styles/global.scss';
+
+// automates some a11y testing
+// https://github.com/dequelabs/axe-core-npm/tree/develop/packages/react
+if (process.env.NODE_ENV !== 'production') {
+  const axe = require('@axe-core/react');
+  axe(React, ReactDOM, 1000);
+}
+
+// TODO: add routing for different pages
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+		<Layout>
+			<Listing />
+		</Layout>
   </React.StrictMode>,
   document.getElementById('root')
 );
