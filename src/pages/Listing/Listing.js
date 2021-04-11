@@ -9,6 +9,15 @@ import RoomShape from '../../components/RoomShape';
 
 import styles from './Listing.module.scss';
 
+/**
+ * Some TODOS that I did not get to complete:
+ * - initial state and load of room shape using refs (right now you have to click a row to show the shape)
+ * - create components for: Gallery, Image, List
+ * - put the Table and rooms feature in a separate component
+ * - extensive accessibility testing with keyboard interaction in the table (adding tabindexes)
+ * - add an image slider package, probably something like swiperjs
+ */
+
 export default function Listing() {
 
 	const [listing, setListing] = useState(null);
